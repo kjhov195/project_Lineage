@@ -1,25 +1,3 @@
-# project_Lineage
-
-소속: 우리팀화이팅
-
-결과: 우수상(빅데이터포럼의장상)
-
-기간: 3 July 2019 ~ 27 November 2019
-
-내용: NC SOFT 리니지 유저 잔존가치 예측
-
-역할: 데이터전처리, 모델 설계
-
-관련기술: Python, Pytorch
-
-<br>
-# Data
-
-대회 규정 상의 이유로 대회가 끝난 직후 모든 데이터를 파기하였습니다. 따라서 이 Repository에는 Raw data와 Preprocessed data는 포함되어 있지 않습니다.
-
-<br>
-# Environment
-
 [OS]
 Windows 10 EDU
 
@@ -35,8 +13,7 @@ lightgbm 2.2.3
 bayesian-optimization 1.0.1
 lime 0.1.1.36
 
-<br>
-# 실행 순서 및 방법
+[코드 실행 순서 및 방법]
 
 1. raw 폴더에 제공 데이텅 총 16개 csv파일을 넣어준다
 (required - /raw folder)
@@ -49,17 +26,18 @@ train_label.csv
 
 test1_activity.csv
 test1_combat.csv  
-test1_payment.csv
+test1_payment.csv 
 test1_pledge.csv  
 test1_trade.csv    
 
 test2_activity.csv
 test2_combat.csv  
-test2_payment.csv
+test2_payment.csv 
 test2_pledge.csv  
 test2_trade.csv    
 
-
+(output)
+.
 2. preprocess 폴더에 있는 preprocess.py를 실행해준다
 - raw데이터들을 불러와 전처리를 수행해주는 코드
 (required - /raw folder)
@@ -72,13 +50,13 @@ test2_trade.csv
 
 /raw/test1_activity.csv
 /raw/test1_combat.csv  
-/raw/test1_payment.csv
+/raw/test1_payment.csv 
 /raw/test1_pledge.csv  
 /raw/test1_trade.csv    
 
 /raw/test2_activity.csv
 /raw/test2_combat.csv  
-/raw/test2_payment.csv
+/raw/test2_payment.csv 
 /raw/test2_pledge.csv  
 /raw/test2_trade.csv    
 
@@ -87,7 +65,7 @@ train_preprocess_1.csv
 test1_preprocess_1.csv
 test2_preprocess_1.csv
 
-3. /model/boosting 폴더에 있는 create_mdoel.py를 실행해준다
+3-1. /model/boosting 폴더에 있는 create_mdoel.py를 실행해준다
 - Bayesian optimizer를 통해서 survival_time을 예측하기 위한 xgboost regression의 hyperparameter를 찾고 모델을 train 해준 sur_reg_xgb.txt 파일
 - Bayesian optimizer를 통해서 amount_spent를 예측하기 위한 lightgbm regression의 hyperparameter를 찾고 모델을 train 해준 ams_reg_lgb.txt 파일
 - survival_time이 64인지 classification을 한 random forest 모델과 amount_spent가 0인지 classification을 한 random forest 모델을 train해준 clf_sur0_ams1.pkl 파일
@@ -119,3 +97,4 @@ md_thres.pkl
 (output - /predict)
 test1_predict.csv
 test2_predict.csv
+

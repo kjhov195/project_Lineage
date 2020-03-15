@@ -13,11 +13,13 @@
 관련기술: Python, Pytorch
 
 <br>
+
 # Data
 
 대회 규정 상의 이유로 대회가 끝난 직후 모든 데이터를 파기하였습니다. 따라서 이 Repository에는 Raw data와 Preprocessed data는 포함되어 있지 않습니다.
 
 <br>
+
 # Environment
 
 [OS]
@@ -36,6 +38,7 @@ bayesian-optimization 1.0.1
 lime 0.1.1.36
 
 <br>
+
 # 실행 순서 및 방법
 
 1. raw 폴더에 제공 데이텅 총 16개 csv파일을 넣어준다
